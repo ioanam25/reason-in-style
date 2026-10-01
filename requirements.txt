@@ -1,0 +1,22 @@
+accelerate
+datasets
+# Older `datasets` releases break with the filesystem changes introduced in newer fsspec releases.
+fsspec<2023.10
+jupyterlab
+matplotlib
+numpy
+pandas
+# `datasets` still relies on `PyExtensionType`, which is removed in pyarrow 21.
+pyarrow<21
+pytest
+pytorch-lightning
+ruff
+scikit-learn
+hdbscan
+torch
+tqdm
+transformers
+umap-learn
+# Keep vLLM unpinned so installs resolve to the newest available Linux release.
+vllm; sys_platform == 'linux'
+wandb

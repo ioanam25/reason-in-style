@@ -1,0 +1,57 @@
+{
+  "source_hf_dataset": "Student-Centric-Answer-Sampling/scas_verified_teacher_pool",
+  "hf_config": "all",
+  "hf_url": "https://huggingface.co/datasets/Student-Centric-Answer-Sampling/scas_verified_teacher_pool",
+  "teachers": [
+    "gemma-4-31b-it",
+    "gpt-5-chat_2025-10-03",
+    "gpt-oss-120b",
+    "llama-3.3-70b-instruct",
+    "olmo-3.1-32b-instruct",
+    "phi-4-reasoning-plus",
+    "qwen2.5-72b-instruct",
+    "qwen3-32b",
+    "qwen3.5-27b"
+  ],
+  "prompt_format": "question_only (no teacher prefix)",
+  "output_dir": "data/scas/standard_full_sft",
+  "splits": {
+    "train": {
+      "rows": 111447,
+      "questions": 12383,
+      "style_counts": {
+        "gemma-4-31b-it": 12383,
+        "gpt-5-chat_2025-10-03": 12383,
+        "gpt-oss-120b": 12383,
+        "llama-3.3-70b-instruct": 12383,
+        "olmo-3.1-32b-instruct": 12383,
+        "phi-4-reasoning-plus": 12383,
+        "qwen2.5-72b-instruct": 12383,
+        "qwen3-32b": 12383,
+        "qwen3.5-27b": 12383
+      }
+    },
+    "validation": {
+      "rows": 12816,
+      "questions": 1285,
+      "style_counts": {
+        "gemma-4-31b-it": 1424,
+        "gpt-5-chat_2025-10-03": 1424,
+        "gpt-oss-120b": 1424,
+        "llama-3.3-70b-instruct": 1424,
+        "olmo-3.1-32b-instruct": 1424,
+        "phi-4-reasoning-plus": 1424,
+        "qwen2.5-72b-instruct": 1424,
+        "qwen3-32b": 1424,
+        "qwen3.5-27b": 1424
+      },
+      "standard_chat_token_check": {
+        "n": 12816,
+        "over_max_chat_tokens": 0,
+        "frac_over": 0.0,
+        "p50": 682,
+        "max": 2959
+      }
+    }
+  }
+}
